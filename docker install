@@ -1,0 +1,18 @@
+一、安装docker
+1.安装条件：Centos7 版本要求3.8以上，最好3.10以上。
+2.docker版本  dockers EE 企业版 docker CE 社区版本  查看内核:Uname
+3.关闭防火墙：systemctl stop firewalld.service  vi /etc/selinux/config
+                      enforcing改disabled
+4.安装社区版
+5.安装wget命令 yum -y install wget
+6.下载docker社区版yum源
+cd  /etc/yum.repos.d/
+wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+7.查看docker安装包：yum list | grep docker
+8.安装docker Ce 社区版 ：yum install -y docker-ce.x86_64
+9.设置开机启动：systemctl enable docker
+10.更新xfsprpogs：yum -y update xfsprogs
+11.启动docker： systemctl start docker
+12.查看版本： docker version
+13.产看详细信息：docker info
